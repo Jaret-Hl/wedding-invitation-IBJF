@@ -1,16 +1,22 @@
 ---
 const { children } = Astro.props;
 ---
+
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Invitación de Boda</title>
-    <link rel="stylesheet" href="/node_modules/flipdown/dist/flipdown.css" />
-    <script type="module" src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body class="bg-[#FFF8E7] font-sans text-center text-gray-800">
-    {children}
-    <slot />
+  <body class="bg-neutral-50 text-gray-800 relative overflow-x-hidden">
+    <img
+      src="/assets/floral-bg.png"
+      alt="Decoración floral"
+      class="absolute top-0 left-0 w-full h-full object-cover opacity-20 pointer-events-none -z-10"
+    />
+    <main class="px-4 sm:px-6 md:px-8 max-w-3xl mx-auto text-center">
+      {children}
+      <slot />
+    </main>
   </body>
 </html>

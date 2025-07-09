@@ -2,12 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.jsx';
 import CeremonyDetails from '../components/CeremonyDetails.astro';
-import Countdown from '../components/Countdown.jsx';
 import Schedule from '../components/Schedule.astro';
+import Countdown from '../components/Countdown.astro';
+import WeddingCountdown from '../components/WeddingCountdown.astro';
 ---
 <Layout>
   <Hero client:load/>
   <CeremonyDetails /> 
-  <Countdown client:load />
+  <Countdown timestamp={1765645200000}/>
   <Schedule />
 </Layout>
